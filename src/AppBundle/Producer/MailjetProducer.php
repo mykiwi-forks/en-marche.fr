@@ -10,7 +10,7 @@ class MailjetProducer extends Producer
     public function scheduleEmail(MailjetTemplateEmail $email): void
     {
         $this->publish(json_encode([
-            'email' => $email->getHttpRequestPayload(),
+            'email' => $email->getUuid(),
         ]));
     }
 }
